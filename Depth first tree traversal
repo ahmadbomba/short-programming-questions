@@ -1,0 +1,10 @@
+
+Preorder_Tree_Traversal(tree)
+	Visit the root
+        Preorder_Tree_Traversal (left-subtree)
+        Preorder_Tree_Traversal (right-subtree)
+END
+
+
+For every root node visited, its left child is traversed, followed by its right child afterwards. 
+This kind of traversal goes deeper into the tree (children) before exploring siblings.

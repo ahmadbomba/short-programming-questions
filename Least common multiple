@@ -1,0 +1,28 @@
+private static int gcd(int a, int b) {
+		while (b > 0){ 
+			int temp = b; 
+			b = a % b;  
+			a = temp;
+		} 
+		return a; 
+	} 
+	
+	private static int gcd(int[] Array) { 
+		int result = Array[0]; 
+		for(int i = 1; i < Array.length; i++){ 
+			result = gcd(result, Array[i]);
+		}
+			return result; 
+	}
+	
+	private static int lcm(int a, int b) { 
+		return a * (b / gcd(a, b)); 
+	} 
+	
+	private static void lcm(int[] Array) { 
+		int result = Array[0]; 
+		for(int i = 1; i < Array.length; i++){ 
+			result = lcm(result, Array[i]); 
+		}
+		System.out.print(result); 
+	}

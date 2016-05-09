@@ -1,0 +1,30 @@
+public void removeDuplicates(int Array[]){
+		int length=Array.length;
+		
+		for (int i=0;i<length;i++){
+			for (int j=0;j<length;j++){
+				if (i==j){
+					continue;
+				}// End of inner if
+				else {
+					if (Array[i]==Array[j]){
+						length=length-1;
+						for(int k=j;k<length;k++){
+							Array[k]=Array[k+1];
+						}//End of innermost for
+					}//End of innermost if
+					else{
+						continue;
+					}
+				}
+			}//End of inner for loop
+		}//End of outer for loop 
+		for (int c=0;c<length;c++){
+			if (c!=length-1){
+				System.out.print(Array[c]+" , ");
+			}
+			else{
+				System.out.print(Array[c]);
+			}
+		}
+	}//End of removeDuplicates Method
